@@ -6,7 +6,7 @@ const AboutMe = () => {
     <div className="about-container">
       <div className="about-content">
         <div className="profile-image">
-          <img src="https://media.licdn.com/dms/image/v2/D4D03AQHcqXkHFxyuHw/profile-displayphoto-shrink_800_800/B4DZXVBg2wG8Ac-/0/1743035699172?e=1752105600&v=beta&t=LWjDBZEc8Qi6v3YGf2mWhP2oKdp9zF6fP6LR_Ch-p8g" alt="Profile" />
+          <img src="profile.png" alt="Profile" />
         </div>
         <div className="about-text">
           <h1>About Me</h1>
