@@ -7,19 +7,43 @@
 .about-content {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 4rem;
+  background: var(--white);
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow-lg);
 }
 
 .profile-image {
   flex: 1;
   text-align: center;
+  position: relative;
+}
+
+.profile-image::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: var(--gradient-primary);
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.1;
 }
 
 .profile-image img {
   width: 100%;
   max-width: 300px;
   border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-md);
+  border: 4px solid var(--white);
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover img {
+  transform: scale(1.02);
 }
 
 .about-text {
@@ -27,56 +51,83 @@
 }
 
 .about-text h1 {
-  font-size: 2.5rem;
-  color: var(--primary-color);
+  font-size: 2.8rem;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 0.5rem;
 }
 
 .subtitle {
-  font-size: 1.2rem;
-  color: var(--secondary-color);
+  font-size: 1.4rem;
+  color: var(--accent-color);
   margin-bottom: 1.5rem;
+  font-weight: 500;
 }
 
 .description {
   font-size: 1.1rem;
   line-height: 1.8;
   margin-bottom: 2rem;
+  color: var(--text-color);
 }
 
 .skills h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
   color: var(--primary-color);
+  position: relative;
+  display: inline-block;
+}
+
+.skills h2::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 40%;
+  height: 3px;
+  background: var(--gradient-primary);
+  border-radius: 2px;
 }
 
 .skill-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.8rem;
+  gap: 1rem;
 }
 
 .skill-tag {
-  background-color: var(--secondary-color);
+  background: var(--gradient-secondary);
   color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
   font-size: 0.9rem;
-  transition: transform 0.2s ease;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
 }
 
 .skill-tag:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
 }
 
 @media (max-width: 768px) {
   .about-content {
     flex-direction: column;
     text-align: center;
+    padding: 2rem;
+    gap: 2rem;
   }
 
   .profile-image {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .skills h2::after {
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .skill-tags {

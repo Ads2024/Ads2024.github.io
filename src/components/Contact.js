@@ -30,14 +30,11 @@ const Contact = () => {
           <h2>Get in Touch</h2>
           <p>Feel free to reach out to me for any inquiries or opportunities.</p>
           <div className="social-links">
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/adam-m-62a5b4168/" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-linkedin"></i>
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/Ads2024" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-github"></i>
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-twitter"></i>
             </a>
           </div>
         </div>

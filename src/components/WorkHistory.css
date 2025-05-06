@@ -6,26 +6,29 @@
 
 .work-history-container h1 {
   text-align: center;
-  color: var(--primary-color);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 3rem;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
 }
 
 .timeline {
   position: relative;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 .timeline::before {
   content: '';
   position: absolute;
-  width: 2px;
-  background-color: var(--secondary-color);
+  width: 3px;
+  background: var(--gradient-primary);
   top: 0;
   bottom: 0;
   left: 50%;
-  margin-left: -1px;
+  margin-left: -1.5px;
+  border-radius: 3px;
 }
 
 .timeline-item {
@@ -44,51 +47,63 @@
 }
 
 .timeline-content {
-  padding: 20px;
+  padding: 25px;
   background-color: var(--white);
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
   position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
 }
 
 .timeline-content::before {
   content: '';
   position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color: var(--secondary-color);
+  width: 24px;
+  height: 24px;
+  background: var(--gradient-primary);
   border-radius: 50%;
   top: 50%;
   transform: translateY(-50%);
+  box-shadow: var(--shadow-sm);
 }
 
 .timeline-item:nth-child(odd) .timeline-content::before {
-  right: -50px;
+  right: -52px;
 }
 
 .timeline-item:nth-child(even) .timeline-content::before {
-  left: -50px;
+  left: -52px;
 }
 
 .timeline-content h2 {
   color: var(--primary-color);
   margin-bottom: 0.5rem;
+  font-size: 1.6rem;
 }
 
 .timeline-content h3 {
-  color: var(--secondary-color);
+  color: var(--accent-color);
   margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 .period {
   color: #666;
   font-style: italic;
   margin-bottom: 1rem;
+  font-size: 0.9rem;
 }
 
 .description {
-  margin-bottom: 1rem;
-  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  color: var(--text-color);
 }
 
 .achievements {
@@ -98,15 +113,17 @@
 
 .achievements li {
   position: relative;
-  padding-left: 1.5rem;
-  margin-bottom: 0.5rem;
+  padding-left: 1.8rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
 }
 
 .achievements li::before {
-  content: '•';
-  color: var(--secondary-color);
+  content: '→';
+  color: var(--accent-color);
   position: absolute;
   left: 0;
+  font-weight: bold;
 }
 
 @media (max-width: 768px) {
@@ -125,6 +142,6 @@
   }
 
   .timeline-content::before {
-    left: -50px;
+    left: -52px;
   }
 } 
