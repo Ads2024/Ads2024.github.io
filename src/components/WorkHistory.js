@@ -26,7 +26,7 @@ const WorkHistory = () => {
         'Led inventory forecasting initiative using statistical modelling, reducing holding costs by 15%',
         'Modernised supply chain planning system from legacy Access to Power BI, significantly enhancing analytical capabilities',
         'Developed a forecasting system using Python and SQL, providing insights for capacity planning and resource allocation',
-        'Developed real-time KPI dashboards for supply chain monitoring and anomaly detection'
+        'Developed real-time KPI dashboards for supply chain monitoring and anomaly detection, reducing incident blind spots'
       ]
     },
     {
