@@ -17,6 +17,7 @@ function App() {
           <Link to="education" smooth={true} duration={500} className="nav-link">Education</Link>
           <Link to="portfolio" smooth={true} duration={500} className="nav-link">Portfolio</Link>
           <Link to="contact" smooth={true} duration={500} className="nav-link">Contact</Link>
+          <a href="/Resume.pdf" download className="nav-link download-btn">Download CV</a>
         </div>
       </nav>
 
