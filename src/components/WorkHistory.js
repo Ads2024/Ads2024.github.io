@@ -50,7 +50,7 @@ const WorkHistory = () => {
         'Developed statistical models in R to analyse antibacterial properties of paracetamol',
         'Contributed to experimental design, spectroscopy analysis, and gene expression studies via PCR and cell-based assays',
         'Completed a 12 month research project on the antibacterial properties of paracetamol',
-        'Utilised a range of statistical techniques including linear regression, ANOVA, and time series analysis'
+        
       ]
     }
   ];

@@ -4,25 +4,25 @@ import './Portfolio.css';
 const Portfolio = () => {
   const projects = [
     {
-      title: 'Project 1',
-      description: 'A brief description of the project and its goals.',
-      image: 'https://via.placeholder.com/400x300',
-      technologies: ['React', 'Node.js', 'MongoDB'],
-      link: '#'
+      title: 'Linear Programming Model',
+      description: 'A Linear Programming (LP) model designed to help students make strategic college application decisions based on their GPA. Using data analysis of past admission statistics, this model balances admission probability with college prestige to optimize application strategy.',
+      image: 'https://github.com/Ads2024/US-College-Optimizer-LP-Model/blob/main/public/LP_Model.png?raw=true/400x300',
+      technologies: ['React', 'Node.js', 'tailwind'],
+      link: 'https://ads2024.github.io/US-College-Optimizer-LP-Model/'
     },
     {
-      title: 'Project 2',
-      description: 'Another project description highlighting key features.',
-      image: 'https://via.placeholder.com/400x300',
-      technologies: ['Vue.js', 'Firebase', 'SCSS'],
-      link: '#'
+      title: 'A/B Testing Analysis',
+      description: 'This analysis compares the performance of two marketing campaigns using A/B testing methodology. The control campaign represents the established approach, while the test campaign implements alternative strategies.',
+      image: 'https://github.com/Ads2024/AB-Testing-Campaign-Analysis/blob/main/public/AB_Testing.png?raw=true/400x300',
+      technologies: ['React', 'Node.js', 'tailwind'],
+      link: 'https://ads2024.github.io/AB-Testing-Campaign-Analysis/'
     },
     {
-      title: 'Project 3',
-      description: 'Description of the third project and its impact.',
-      image: 'https://via.placeholder.com/400x300',
-      technologies: ['Angular', 'Express', 'PostgreSQL'],
-      link: '#'
+      title: 'BMW Stock Analytics Dashboard',
+      description: 'A modern, interactive dashboard built with Streamlit for analyzing BMW stock data. Features a UI with glassmorphism effects and dynamic starfield background animation.',
+      image: 'https://github.com/Ads2024/BMW-Stock-Analysis-Dashboard/blob/main/assets/Preview.gif?raw=true/400x300',
+      technologies: ['Python', 'Streamlit', 'Plotly', 'glassmorphism','scipy','numpy','pandas'],
+      link: 'https://bmw-stock-analysis-dashboard.streamlit.app/'
     }
   ];
 

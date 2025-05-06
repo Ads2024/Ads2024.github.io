@@ -32,6 +32,16 @@ const AboutMe = () => {
               <span className="skill-tag">DAX</span>
               <span className="skill-tag">Forecasting</span>
               <span className="skill-tag">ETL</span>
+              <span className="skill-tag">Tableau</span>
+              <span className="skill-tag">Excel</span>
+              <span className="skill-tag">Docker</span>
+              <span className="skill-tag">Java</span>
+              <span className="skill-tag">JavaScript</span>
+              <span className="skill-tag">React</span>
+              <span className="skill-tag">Node.js</span>
+              <span className="skill-tag">Azure</span>
+              <span className="skill-tag">MongoDB</span>
+              
               
 
             </div>
