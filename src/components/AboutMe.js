@@ -10,9 +10,9 @@ const AboutMe = () => {
         </div>
         <div className="about-text">
           <h1>About Me</h1>
-          <p className="subtitle">Data Analyst</p>
+          <p className="subtitle">Full Stack Data Analyst </p>
           <p className="description">
-          Data Analyst with 3+ years’ experience across FMCG, assembly manufacturing, and utilities. Skilled in SQL, Python, Power BI, and Databricks. I’ve automated reporting pipelines, implemented forecasting systems, and developed scalable data tools using SQL, Python, DAX, and Git-based CI/CD workflows that drive real decisions. Currently completing a Master of Computer Science to deepen my technical stack and expand into analytics engineering and data product development.
+          Data Analyst & Analytics Engineer with 3+ years of experience across FMCG, assembly manufacturing, and utilities. I specialize in building forecasting models, optimization tools, and self-serve BI systems using Python, SQL, DAX, and Databricks. My work spans automated reporting pipelines, statistical anomaly detection, and scalable data infrastructure, all backed by Git-based CI/CD workflows. Currently completing a Master of Computer Science to deepen my capabilities in distributed systems, machine learning, and analytics product development.
           </p>
           <div className="skills">
             <h2>Skills</h2>
