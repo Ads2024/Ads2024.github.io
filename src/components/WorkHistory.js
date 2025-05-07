@@ -7,6 +7,7 @@ const WorkHistory = () => {
       company: 'Downer EDI',
       position: 'Data Analyst',
       period: '2024 - Present',
+      logo: '/logos/downer.png',
       description: 'Developed and maintained data pipelines and reporting tools using SQL, Python, and Power BI to support decision-making and strategic initiatives.',
       achievements: [
         'Automated reporting workflows, cutting manual effort by 50% and improving reliability',
@@ -20,6 +21,7 @@ const WorkHistory = () => {
       company: 'Snack Brands Australia',
       position: 'Supply Chain Data Analyst',
       period: '2022 - 2023',
+      logo: '/logos/snackbrands.jpg',
       description: 'Transformed supply chain analytics through statistical forecasting and data warehousing. Designed A/B testing frameworks with linear programming to optimize operational planning. Modernized planning systems from legacy Access to Power BI, substantially increasing analytical capabilities across the organization',
       achievements: [
         'Applied A/B testing and linear programming to optimise operational costs, achieving a 25% reduction in forecast error',
@@ -33,6 +35,7 @@ const WorkHistory = () => {
       company: 'Rode Microphones',
       position: 'Operations Analyst',
       period: '2021 - 2022',
+      logo: '/logos/rode.jpg',
       description: 'Drove manufacturing efficiency improvements through data-driven optimization. Applied statistical analysis and linear programming to production processes, improving labor efficiency and overall production throughput. Built real-time performance monitoring dashboards for operational visibility',
       achievements: [
         'Implemented statistical analysis and linear programming to optimise production processes, improving labor efficiency and overall production throughput by 25%',
@@ -45,12 +48,12 @@ const WorkHistory = () => {
       company: 'University of Leicester',
       position: 'Research Assistant Intern (Statistical Modelling)',
       period: '2016 - 2017',
+      logo: '/logos/leicester.jpg',
       description: 'Performed statistical modeling in R to analyze antibacterial properties of paracetamol. Contributed to experimental design, spectroscopy analysis, and gene expression studies via PCR and cell-based assays.',
       achievements: [
         'Developed statistical models in R to analyse antibacterial properties of paracetamol',
         'Contributed to experimental design, spectroscopy analysis, and gene expression studies via PCR and cell-based assays',
-        'Completed a 12 month research project on the antibacterial properties of paracetamol',
-        
+        'Completed a 12 month research project on the antibacterial properties of paracetamol'
       ]
     }
   ];
@@ -60,8 +63,11 @@ const WorkHistory = () => {
       <h1>Work History</h1>
       <div className="timeline">
         {workExperiences.map((experience, index) => (
-          <div key={index} className="timeline-item">
+          <div key={index} className="timeline-item" data-aos="fade-up" data-aos-delay={index * 100}>
             <div className="timeline-content">
+              <div className="company-logo">
+                <img src={experience.logo} alt={`${experience.company} logo`} />
+              </div>
               <h2>{experience.company}</h2>
               <h3>{experience.position}</h3>
               <p className="period">{experience.period}</p>

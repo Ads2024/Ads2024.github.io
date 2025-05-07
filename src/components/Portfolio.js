@@ -32,15 +32,15 @@ const Portfolio = () => {
   return (
     <div className="portfolio-container">
       <h1>Portfolio</h1>
-      <div className="projects-grid">
+      <div className="portfolio-grid">
         {projects.map((project, index) => (
-          <div key={index} className="project-card">
-            <div className="project-image">
+          <div key={index} className="portfolio-card" data-aos="fade-up" data-aos-delay={index * 100}>
+            <div className="portfolio-image">
               <img src={project.image} alt={project.title} />
             </div>
-            <div className="project-content">
+            <div className="portfolio-content">
               <h2>{project.title}</h2>
-              <p>{project.description}</p>
+              <p className="description">{project.description}</p>
               <div className="technologies">
                 {project.technologies.map((tech, idx) => (
                   <span key={idx} className="tech-tag">{tech}</span>

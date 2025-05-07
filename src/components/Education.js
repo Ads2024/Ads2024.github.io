@@ -2,45 +2,78 @@ import React from 'react';
 import './Education.css';
 
 const Education = () => {
-  const educationData = [
+  const educationHistory = [
     {
-      degree: "Master of Computer Science (advanced entry)",
-      school: "The University of Sydney",
-      year: "2025 - Current",
-      description: "Specialized in Algorithms and Theory and Data Science and AI. Key coursework includes Advanced Algorithms, Machine Learning, and Big Data Analytics."
+      institution: 'University of Sydney',
+      degree: 'Master of Computer Science (advanced entry)',
+      period: '2025 - Current',
+      logo: '/logos/usyd.jpg',
+      description: "Specialized in Algorithms and Theory and Data Science and AI. Key coursework includes Advanced Algorithms, Machine Learning, and Big Data Analytics.",
+      achievements: [
+      ]
     },
     {
-      degree: "Graduate Certificate of Computer Science",
-      school: "Monash University",
-      year: "2023 - 2024",
-      description: "Focused on computer science fundamentals and programming. Obtained a High Distinction grade."
+      institution: 'Monash University',
+      degree: 'Graduate Certificate of Computer Science',
+      period: '2019 - 2021',
+      logo: '/logos/monash.png',
+      description: "Foundation in Computer Science, including programming, data structures, and algorithms.",
+      achievements: [
+        'High Distinction'
+      ]
     },
     {
-      degree: "Master of Commerce",
-      school: "The University of Sydney",
-      year: "2019 - 2021",
-      description: "Specialised in supply chain operations and global business."
+      institution: 'University of Sydney',
+      degree: 'Master of Commerce',
+      period: '2019 - 2021',
+      logo: '/logos/usyd.jpg',
+      description: "Specialised in Supply chain Operations Management, focused on supply chain analytics, optimisation, risk management and predictive analytics.",
+      achievements: [
+      ]
     },
     {
-      degree: "Bachelor of Science (Honours) in Biological Science",
-      school: "University of Leicester, UK",
-      year: "2014 - 2017",
-      description: "Specialised in Biochemistry and Molecular Biology. Graduated with First Class Honours."
+      institution: 'University of Leicester',
+      degree: 'Bachelor of Science in Biological Sciences',
+      period: '2014 - 2017',
+      logo: '/logos/leicester.jpg',
+      description: 'Focused on molecular biology, genetics, and statistical analysis. Developed strong analytical skills through laboratory research and data analysis.',
+      achievements: [
+        'First Class Honours',
+        'Research Project: "Statistical Analysis of Antibacterial Properties"',
+        'Key courses: Molecular Biology, Genetics, Statistics, Research Methods'
+      ]
     }
   ];
+
+  // Sort education history by period (latest first)
+  const sortedEducationHistory = [...educationHistory].sort((a, b) => {
+    const getYear = (period) => {
+      const year = period.split(' - ')[0];
+      return year === 'Current' ? 9999 : parseInt(year);
+    };
+    return getYear(b.period) - getYear(a.period);
+  });
 
   return (
     <div className="education-container">
       <h1>Education</h1>
-      <div className="education-timeline">
-        {educationData.map((edu, index) => (
-          <div key={index} className="education-card">
-            <div className="education-header">
-              <h2>{edu.degree}</h2>
-              <span className="year">{edu.year}</span>
+      <div className="education-grid">
+        {sortedEducationHistory.map((edu, index) => (
+          <div key={index} className="education-card" data-aos="fade-up" data-aos-delay={index * 100}>
+            <div className="institution-logo">
+              <img src={edu.logo} alt={`${edu.institution} logo`} />
             </div>
-            <h3 className="school">{edu.school}</h3>
-            <p className="description">{edu.description}</p>
+            <div className="education-content">
+              <h2>{edu.institution}</h2>
+              <h3>{edu.degree}</h3>
+              <p className="period">{edu.period}</p>
+              <p className="description">{edu.description}</p>
+              <ul className="achievements">
+                {edu.achievements.map((achievement, idx) => (
+                  <li key={idx}>{achievement}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         ))}
       </div>
