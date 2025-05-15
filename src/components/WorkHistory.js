@@ -10,9 +10,10 @@ const WorkHistory = () => {
       logo: '/logos/downer.png',
       description: 'Developed and maintained data pipelines and reporting tools using SQL, Python, and Power BI to support decision-making and strategic initiatives.',
       achievements: [
-        'Automated reporting workflows, cutting manual effort by 50% and improving reliability',
+        'Developed CI/CD-enabled BI dashboards using Power BI, Streamlit, SQL, and Python, slashed manual reporting by 50% and enabled real-time business visibility',
         'Delivered self-service Power BI and custome Streamlit dashboards integrating DAX, SQL, and Python for key business unit',
         'Championed version control adoption for BI assets using Git, supporting collaboration and auditability',
+        'Designed relational schemas in Oracle to improve query performance and consistency',
         'Implemented forecasting systems using Python and SQL, providing insights for capacity planning and resource allocation',
         'Created automated statistical anomaly detection workflows for ticketing system metrics, reducing incident blind spots'
       ]
@@ -24,8 +25,9 @@ const WorkHistory = () => {
       logo: '/logos/snackbrands.jpg',
       description: 'Transformed supply chain analytics through statistical forecasting and data warehousing. Designed A/B testing frameworks with linear programming to optimize operational planning. Modernized planning systems from legacy Access to Power BI, substantially increasing analytical capabilities across the organization',
       achievements: [
-        'Applied A/B testing and linear programming to optimise operational costs, achieving a 25% reduction in forecast error',
+        'Applied A/B testing and linear optimization to drive cost efficiencies across planning and operations,reducing spend by 25%',
         'Led inventory forecasting initiative using statistical modelling, reducing holding costs by 15%',
+        'Transformed raw SCADA sensor streams into a dimensional data model for Power BI ingestion, enabling real-time KPI tracking and historical anomaly detection across production lines',
         'Modernised supply chain planning system from legacy Access to Power BI, significantly enhancing analytical capabilities',
         'Developed a forecasting system using Python and SQL, providing insights for capacity planning and resource allocation',
         'Developed real-time KPI dashboards for supply chain monitoring and anomaly detection, reducing incident blind spots'
@@ -40,7 +42,8 @@ const WorkHistory = () => {
       achievements: [
         'Implemented statistical analysis and linear programming to optimise production processes, improving labor efficiency and overall production throughput by 25%',
         'Ran A/B tests to optimise packaging, improving labour efficiency by 70%',
-        'Introduced automated reporting workflows, saving over 10 hours per week in manual effort',
+        'Built fact and dimension tables to model production throughput, machine downtime, and shift performance across Rode’s assembly operations',
+        'Automated reporting workflows, saving 10+ hours of manual effort per week',
         'Built real-time performance monitoring dashboards for operational visibility'
       ]
     },
