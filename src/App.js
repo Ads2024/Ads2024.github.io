@@ -7,7 +7,7 @@ import Portfolio from './components/Portfolio';
 import Education from './components/Education';
 import Certifications from './components/Certifications';
 import Contact from './components/Contact';
-import { initGA, trackPageView, trackSectionView, trackResumeDownload } from './utils/analytics';
+import { initGA, trackPageView, trackSectionView } from './utils/analytics';
 
 function App() {
   useEffect(() => {
@@ -36,10 +36,6 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleResumeDownload = () => {
-    trackResumeDownload();
-  };
-
   return (
     <div className="App">
       <nav className="navbar">
@@ -50,14 +46,6 @@ function App() {
           <Link to="certifications" smooth={true} duration={500} className="nav-link">Certifications</Link>
           <Link to="portfolio" smooth={true} duration={500} className="nav-link">Portfolio</Link>
           <Link to="contact" smooth={true} duration={500} className="nav-link">Contact</Link>
-          <a 
-            href="/Resume.pdf" 
-            download 
-            className="nav-link download-btn"
-            onClick={handleResumeDownload}
-          >
-            Download CV
-          </a>
         </div>
       </nav>
 

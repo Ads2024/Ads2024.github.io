@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    message: ''
+  });
+  const [status, setStatus] = useState({
+    loading: false,
+    success: false,
+    error: false,
     message: ''
   });
 
@@ -16,10 +23,37 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
+    setStatus({ loading: true, success: false, error: false, message: '' });
+
+    try {
+      await emailjs.send(
+        'service_4vf2o0h', 
+        'template_sbit51r',
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        '5N-UmPKuZaCc5sab1' 
+      );
+
+      setStatus({
+        loading: false,
+        success: true,
+        error: false,
+        message: 'Message sent successfully!'
+      });
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      setStatus({
+        loading: false,
+        success: false,
+        error: true,
+        message: 'Failed to send message. Please try again.'
+      });
+    }
   };
 
   return (
@@ -48,6 +82,7 @@ const Contact = () => {
               value={formData.name}
               onChange={handleChange}
               required
+              disabled={status.loading}
             />
           </div>
           <div className="form-group">
@@ -59,6 +94,7 @@ const Contact = () => {
               value={formData.email}
               onChange={handleChange}
               required
+              disabled={status.loading}
             />
           </div>
           <div className="form-group">
@@ -69,9 +105,21 @@ const Contact = () => {
               value={formData.message}
               onChange={handleChange}
               required
+              disabled={status.loading}
             ></textarea>
           </div>
-          <button type="submit" className="submit-button">Send Message</button>
+          <button 
+            type="submit" 
+            className="submit-button"
+            disabled={status.loading}
+          >
+            {status.loading ? 'Sending...' : 'Send Message'}
+          </button>
+          {status.message && (
+            <div className={`status-message ${status.success ? 'success' : status.error ? 'error' : ''}`}>
+              {status.message}
+            </div>
+          )}
         </form>
       </div>
     </div>
