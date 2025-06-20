@@ -15,7 +15,7 @@ const Education = () => {
     {
       institution: 'Monash University',
       degree: 'Graduate Certificate of Computer Science',
-      period: '2019 - 2021',
+      period: '2023 - 2024',
       logo: '/logos/monash.png',
       description: "Foundation in Computer Science, including programming, data structures, and algorithms.",
       achievements: [
