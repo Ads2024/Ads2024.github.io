@@ -1,0 +1,81 @@
+SUMMARY: Data Engineer with 4+ years’ experience building scalable data platforms, designing complex ingestion pipelines, and enforcing engineering-grade governance across hybrid Azure environments. I specialize in Azure-centric data engineering including Git-backed development, CI/CD automation, OneLake architecture, SQL object versioning, and metadata-driven workflow design. My work centers on creating resilient infrastructure, automated lineage extraction, high-volume schema tracking, environment promotion pipelines, and fault-tolerant processing of structured and semi-structured data.
+
+TECHNICAL SKILLS:
+
+    Data Modeling: Dimensional Modeling, Semantic Layer Design, Star/Snowflake Modeling, Time-Series Architecture, Forecasting, A/B Testing.
+
+    Languages & Tools: Python (pandas, numpy, pyarrow, pyspark), SQL, PowerShell, Java, JavaScript, Git, VS Code, CI/CD.
+
+    Data Engineering: ETL/ELT, Metadata-Driven Workflows, SQL Object Versioning, Schema Tracking, Automated Lineage, PDF Processing, DataOps.
+
+    Platforms: Microsoft Fabric (Notebooks, Dataflow Gen2, Lakehouse, OneLake), Power BI (DAX, RLS/OLS), Streamlit.
+
+    Cloud: Azure (DevOps, Data Factory, SQL, Storage), Docker, Hybrid On-Prem + Cloud.
+
+PROFESSIONAL EXPERIENCE:
+
+    Analytics Data Engineer (Microsoft Fabric) @ HammondCare (Aug 2025 – Present)
+
+        Led enterprise-wide Git integration across Power BI and Fabric workspaces.
+
+        Designed CI/CD foundations: automated validation, environment promotion, and UAT hygiene.
+
+        Built dual-repository backup architecture (Azure DevOps + GitHub) for daily PBIP backups.
+
+        Engineered automated extraction of 40,000+ SQL objects delivering 10+ years of schema history.
+
+        Delivered OneLake migration pipelines for structured/semi-structured datasets.
+
+        Built AI-ready metadata and prototypes (Copilot, GPT-Streamlit) for failure analysis.
+
+    Data Analyst @ Downer EDI (Jan 2024 – Present)
+
+        Developed CI/CD-enabled BI dashboards (Power BI, Streamlit, SQL, Python).
+
+        Slashed manual reporting by 50% and enabled real-time visibility.
+
+        Built end-to-end anomaly detection workflows for ticketing metrics.
+
+        Led Git-based version control implementation for BI assets.
+
+    Supply Chain Data Analyst @ Snack Brands Australia (Jul 2022 – Dec 2023)
+
+        Transformed SCADA sensor streams into dimensional models for real-time KPI tracking.
+
+        Migrated legacy Access planning systems to Power BI (80% increase in agility).
+
+        Developed Azure Data Factory pipelines and Snowflake schemas.
+
+        Applied A/B testing/linear optimization to reduce spend by 25%.
+
+    Operations Analyst @ Rode Microphones (Aug 2021 – Jul 2022)
+
+        Modeled production throughput and machine downtime for assembly operations.
+
+        Identified bottlenecks via statistical analysis, increasing throughput by 25%.
+
+        Conducted A/B testing on packaging processes (70% efficiency gain).
+
+FREELANCE & PORTFOLIO:
+
+    Projects: Custom BI dashboards, OEE tracking, labor optimization, and predictive maintenance tools using Fabric, Streamlit, and Python.
+
+    Portfolio URL: https://ads2024.github.io/
+
+EDUCATION:
+
+    Master of Computer Science (Current) - University of Sydney (Data Science & AI)
+
+    Graduate Certificate in Computer Science (2024) - Monash University (Grade: HD)
+
+    Master of Commerce (2021) - University of Sydney (Supply Chain & Optimization)
+
+    B.Sc. (Hons) Biological Sciences (2017) - University of Leicester (First Class)
+
+CERTIFICATIONS:
+
+    Microsoft Certified: Power BI Data Analyst Associate (PL-300)
+
+    Databricks Lakehouse Fundamentals
+
+    HackerRank SQL (Advanced & Intermediate)
