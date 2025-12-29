@@ -14,7 +14,15 @@ function Router() {
   );
 }
 
+import { useEffect } from "react";
+import { initGA, trackPageView } from "./lib/analytics";
+
 function App() {
+  useEffect(() => {
+    initGA();
+    trackPageView(window.location.pathname);
+  }, []);
+
   return (
     <QueryClientProvider client={queryClient}>
       <Toaster />

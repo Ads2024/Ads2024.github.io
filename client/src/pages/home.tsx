@@ -1,9 +1,11 @@
 import { BlueprintWrapper } from "@/components/layout/BlueprintWrapper";
 import { HeroNode } from "@/components/ui/hero-node";
 import { TechCard } from "@/components/ui/tech-card";
+import { PipelineCard } from "@/components/ui/pipeline-card";
+import { ProjectCard } from "@/components/ui/project-card";
 import { RESUME_DATA } from "@/lib/data";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-import { Terminal, Database, Cloud, Layout, Briefcase, GraduationCap, Github, Linkedin, Mail } from "lucide-react";
+import { Terminal, Database, Cloud, Layout, Briefcase, GraduationCap, Github, Linkedin, Mail, GitBranch, BarChart3, Award } from "lucide-react";
 import { useRef } from "react";
 
 export default function Home() {
@@ -19,7 +21,7 @@ export default function Home() {
     target: experienceRef,
     offset: ["start end", "end end"]
   });
-  
+
   const experienceLineHeight = useTransform(experienceProgress, [0, 1], ["0%", "100%"]);
 
   return (
@@ -34,8 +36,8 @@ export default function Home() {
         {/* Navigation / Header */}
         <header className="fixed top-0 left-0 right-0 p-4 md:p-6 flex justify-between items-center z-40 bg-background/80 backdrop-blur-sm border-b border-white/5">
           <div className="font-mono text-sm text-primary flex items-center gap-2">
-            <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-            SYSTEM_ONLINE
+            <img src="/favicon.png" alt="Logo" className="w-6 h-6 hover:opacity-80 transition-opacity" />
+            <span>SYSTEM_ONLINE</span>
           </div>
           <div className="flex gap-4">
             <SocialLink href={RESUME_DATA.socials.github} icon={Github} label="GH" />
@@ -46,9 +48,9 @@ export default function Home() {
 
         {/* Hero Section */}
         <section className="min-h-[90vh] flex flex-col justify-center relative">
-          <HeroNode name={RESUME_DATA.name} title={RESUME_DATA.title} />
-          
-          <motion.div 
+          <HeroNode name={RESUME_DATA.name} title={RESUME_DATA.title} avatarUrl={RESUME_DATA.avatarUrl} />
+
+          <motion.div
             className="text-center max-w-2xl mx-auto mt-8 text-slate-400 font-light leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -57,7 +59,7 @@ export default function Home() {
             <p>{RESUME_DATA.summary}</p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-primary/50"
             animate={{ y: [0, 10, 0] }}
             transition={{ repeat: Infinity, duration: 2 }}
@@ -67,39 +69,41 @@ export default function Home() {
           </motion.div>
         </section>
 
+
+
         {/* Skills Grid */}
         <section className="py-20 relative">
           <SectionHeader title="TECHNICAL_CAPABILITIES" icon={Terminal} />
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <TechCard 
-              title="Data Modeling" 
-              type="database" 
-              items={RESUME_DATA.skills.dataModeling} 
+            <TechCard
+              title="Data Modeling"
+              type="database"
+              items={RESUME_DATA.skills.dataModeling}
               delay={0.1}
             />
-            <TechCard 
-              title="Platforms" 
-              type="server" 
-              items={RESUME_DATA.skills.platforms} 
+            <TechCard
+              title="Platforms"
+              type="server"
+              items={RESUME_DATA.skills.platforms}
               delay={0.2}
             />
-            <TechCard 
-              title="Cloud Architecture" 
-              type="server" 
-              items={RESUME_DATA.skills.cloud} 
+            <TechCard
+              title="Cloud Architecture"
+              type="server"
+              items={RESUME_DATA.skills.cloud}
               delay={0.3}
             />
-            <TechCard 
-              title="Languages & Tools" 
-              type="terminal" 
-              items={RESUME_DATA.skills.languagesTools} 
+            <TechCard
+              title="Languages & Tools"
+              type="terminal"
+              items={RESUME_DATA.skills.languagesTools}
               delay={0.4}
             />
-            <TechCard 
-              title="Data Engineering" 
-              type="database" 
-              items={RESUME_DATA.skills.dataEngineering} 
+            <TechCard
+              title="Data Engineering"
+              type="database"
+              items={RESUME_DATA.skills.dataEngineering}
               delay={0.5}
             />
           </div>
@@ -108,13 +112,13 @@ export default function Home() {
         {/* Experience Timeline */}
         <section className="py-20 relative" ref={experienceRef}>
           <SectionHeader title="SYSTEM_LOGS // EXPERIENCE" icon={Briefcase} />
-          
+
           <div className="relative ml-4 md:ml-12 pl-8 md:pl-12 space-y-12">
             {/* Background Line */}
             <div className="absolute left-0 top-0 bottom-0 w-px bg-primary/20" />
-            
+
             {/* Animated Progress Line */}
-            <motion.div 
+            <motion.div
               className="absolute left-0 top-0 w-px bg-primary shadow-[0_0_10px_var(--color-primary)] origin-top"
               style={{ height: experienceLineHeight }}
             />
@@ -125,9 +129,9 @@ export default function Home() {
                 <div className="absolute -left-[41px] md:-left-[57px] top-6 w-5 h-5 rounded-full bg-background border-2 border-primary shadow-[0_0_10px_var(--color-primary)] z-10 flex items-center justify-center">
                   <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
                 </div>
-                
-                <TechCard 
-                  title={job.role} 
+
+                <TechCard
+                  title={job.role}
                   subtitle={`${job.company} | ${job.period}`}
                   items={job.highlights}
                   type="server"
@@ -142,12 +146,12 @@ export default function Home() {
         {/* Education Section */}
         <section className="py-20 mb-20">
           <SectionHeader title="KERNEL_UPDATES // EDUCATION" icon={GraduationCap} />
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {RESUME_DATA.education.map((edu, index) => (
-              <TechCard 
+              <TechCard
                 key={index}
-                title={edu.degree} 
+                title={edu.degree}
                 subtitle={edu.institution}
                 type="database"
                 delay={index * 0.1}
@@ -160,7 +164,75 @@ export default function Home() {
             ))}
           </div>
         </section>
-        
+
+        {/* Pipelines Section */}
+        <section className="py-20 relative">
+          <SectionHeader title="ENGINEERING_PIPELINES" icon={GitBranch} />
+          <div className="space-y-12">
+            {RESUME_DATA.pipelines.map((pipeline, index) => (
+              <PipelineCard
+                key={index}
+                title={pipeline.title}
+                description={pipeline.description}
+                tech={pipeline.tech}
+                repo={pipeline.repo}
+                mermaid={pipeline.mermaid}
+                delay={index * 0.1}
+              />
+            ))}
+          </div>
+        </section>
+
+        {/* Projects Section */}
+        <section className="py-20 relative">
+          <SectionHeader title="METRICS_&_ANALYSIS" icon={BarChart3} />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {RESUME_DATA.projects.map((project, index) => (
+              <ProjectCard
+                key={index}
+                title={project.title}
+                description={project.description}
+                tech={project.tech}
+                link={project.link}
+                repo={project.repo}
+                delay={index * 0.1}
+              />
+            ))}
+          </div>
+        </section>
+
+        {/* Certifications Section */}
+        <section className="py-20 mb-20">
+          <SectionHeader title="AUTHENTICATION_TOKENS // CERTIFICATIONS" icon={Award} />
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {RESUME_DATA.certifications.map((cert, index) => (
+              <TechCard
+                key={index}
+                title={cert.title}
+                subtitle={cert.issuer}
+                type="terminal"
+                delay={index * 0.1}
+              >
+                <div className="flex flex-col gap-2 mt-4">
+                  <div className="flex justify-between items-center text-sm text-slate-400">
+                    <span>Issued: {cert.year}</span>
+                    {cert.credentialId && <span className="text-[10px] font-mono opacity-70">ID: {cert.credentialId.substring(0, 8)}...</span>}
+                  </div>
+                  <a
+                    href={cert.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-2 text-xs font-mono text-primary hover:underline flex items-center gap-1"
+                  >
+                    VERIFY_TOKEN ↗
+                  </a>
+                </div>
+              </TechCard>
+            ))}
+          </div>
+        </section>
+
         <footer className="py-8 text-center text-slate-600 text-sm font-mono border-t border-white/5">
           <p>SYSTEM_ID: ADAM_M_PORTFOLIO_V1.0 // ENGINEERED WITH REACT + TAILWIND</p>
         </footer>
@@ -186,9 +258,9 @@ function SectionHeader({ title, icon: Icon }: { title: string, icon: any }) {
 
 function SocialLink({ href, icon: Icon, label }: { href: string, icon: any, label: string }) {
   return (
-    <a 
-      href={href} 
-      target="_blank" 
+    <a
+      href={href}
+      target="_blank"
       rel="noopener noreferrer"
       className="flex items-center gap-2 text-slate-400 hover:text-primary transition-colors group"
     >
