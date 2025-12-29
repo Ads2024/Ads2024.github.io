@@ -6,7 +6,7 @@ export const RESUME_DATA = {
   summary: "Data Engineer with 4+ years’ experience building scalable data platforms, designing complex ingestion pipelines, and enforcing engineering-grade governance across hybrid Azure environments. I specialize in Azure-centric data engineering including Git-backed development, CI/CD automation, OneLake architecture, SQL object versioning, and metadata-driven workflow design.",
   socials: {
     github: "https://ads2024.github.io/", // Using portfolio URL as placeholder
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/adam-m-62a5b4168",
     email: "#"
   },
   pipelines: [
