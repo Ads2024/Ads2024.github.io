@@ -7,7 +7,7 @@ export const RESUME_DATA = {
   socials: {
     github: "https://ads2024.github.io/", // Using portfolio URL as placeholder
     linkedin: "https://www.linkedin.com/in/adam-m-62a5b4168",
-    email: "#"
+    email: "amadri386@gmail.com"
   },
   pipelines: [
     {

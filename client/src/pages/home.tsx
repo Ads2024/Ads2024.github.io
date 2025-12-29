@@ -256,13 +256,39 @@ function SectionHeader({ title, icon: Icon }: { title: string, icon: any }) {
   );
 }
 
+import { toast } from "sonner";
+
 function SocialLink({ href, icon: Icon, label }: { href: string, icon: any, label: string }) {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (href.startsWith("mailto:")) {
+      e.preventDefault();
+      const email = href.replace("mailto:", "");
+
+      // If email is just placeholder #, don't do anything or show default
+      if (email === "#" || email.includes("example.com")) {
+        toast.error("Email not configured yet");
+        return;
+      }
+
+      navigator.clipboard.writeText(email);
+      toast.success("Email address copied to clipboard!", {
+        description: "Opening your mail client...",
+      });
+
+      // Small delay to let toast show before opening mail client
+      setTimeout(() => {
+        window.location.href = href;
+      }, 500);
+    }
+  };
+
   return (
     <a
       href={href}
-      target="_blank"
+      target={href.startsWith("mailto:") ? undefined : "_blank"}
       rel="noopener noreferrer"
-      className="flex items-center gap-2 text-slate-400 hover:text-primary transition-colors group"
+      onClick={handleClick}
+      className="flex items-center gap-2 text-slate-400 hover:text-primary transition-colors group cursor-pointer"
     >
       <Icon size={18} />
       <span className="text-xs font-mono opacity-0 group-hover:opacity-100 transition-opacity hidden md:inline-block">
