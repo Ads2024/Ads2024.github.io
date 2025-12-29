@@ -344,6 +344,7 @@ BatchLog[Batch Script Logs < br /> logs/*.log<br/>Timestamped output]
         "Built dual-repository backup architecture (Azure DevOps + GitHub) for daily PBIP backups.",
         "Engineered automated extraction of 40,000+ SQL objects delivering 10+ years of schema history.",
         "Delivered OneLake migration pipelines for structured/semi-structured datasets.",
+        "Developed enterprise-wide BI environment monitoring using Power BI REST APIs, providing dataset inventory, lineage mapping, workspace analytics, and usage insights across 200+ reports and 40+ workspaces.",
         "Built AI-powered ticketing analytics platform ingesting Jira and ServiceNow data into Lakehouse with Azure OpenAI GPT-4.1 conversational interface, enabling natural language querying and predictive workload analysis for stakeholders from managers to C-suite executives"
       ]
     },
