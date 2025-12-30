@@ -330,8 +330,8 @@ BatchLog[Batch Script Logs < br /> logs/*.log<br/>Timestamped output]
     dataModeling: ["Dimensional Modeling", "Semantic Layer Design", "Star/Snowflake Modeling", "Time-Series Architecture", "Forecasting", "A/B Testing"],
     languagesTools: ["Python (pandas, numpy, pyarrow, pyspark)", "SQL", "PowerShell", "Git"],
     dataEngineering: ["ETL/ELT", "Metadata-Driven Workflows", "SQL Object Versioning", "Schema Tracking", "Semi-Structured Processing", "DataOps", "API Integration", "Infrastructure Cost Reduction", "Performance Optimization"],
-    platforms: ["Databricks", "Microsoft Fabric", "Fabric Notebook Pipelines", "Power BI", "Streamlit", "OneLake", "Dataflow Gen2"],
-    cloud: ["Azure DevOps", "Azure Data Factory", "Azure SQL", "Azure Storage", "Docker", "Hybrid On-Prem + Cloud", "GitHub Actions", "Azure OpenAI", "Service Principals"]
+    platforms: ["Databricks", "Microsoft Fabric (Notebooks, Dataflow Gen2, Pipelines, Lakehouse, OneLake)", "Power BI", "Streamlit"],
+    cloud: ["Azure (DevOps, Data Factory, SQL, Storage, Service Principals, Azure OpenAI)", "Docker", "Hybrid On-Prem + Cloud", "GitHub Actions"]
   },
   experience: [
     {
