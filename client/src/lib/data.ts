@@ -328,7 +328,7 @@ BatchLog[Batch Script Logs < br /> logs/*.log<br/>Timestamped output]
   ],
   skills: {
     dataModeling: ["Modeling (Dimensional, Semantic, Star/Snowflake, Time-Series)", "Forecasting", "A/B Testing"],
-    languagesTools: ["Python (pandas, numpy, pyarrow, pyspark)", "SQL", "PowerShell", "Git", "R", "Java (Intermediate)", "DAX", "M Formula Language"],
+    languagesTools: ["Python (PySpark for distributed processing, pandas, numpy, pyarrow, concurrent.futures)", "SQL", "PowerShell", "Git", "R", "Java (Intermediate)", "DAX", "M Formula Language"],
     dataEngineering: ["ETL/ELT", "Pipeline Orchestration (Notebooks,Fabric Pipelines, Dataflow Gen2, Azure Data Factory)", "DataOps (CI/CD, Backup, Monitoring)", "Automated Versioning (Git, GitHub Actions, py Based pipelines)", "Processing (SQL Object Versioning, Schema Tracking, Semi-Structured Processing, API Integration)", "Optimization (Infrastructure Cost Reduction, Performance Optimization)"],
     platforms: ["Databricks", "Microsoft Fabric (Notebooks, Dataflow Gen2, Pipelines, Lakehouse, OneLake)", "Power BI", "Streamlit"],
     cloud: ["Azure (DevOps, Data Factory, SQL, Storage, Service Principals, Azure OpenAI)", "Docker", "Hybrid On-Prem + Cloud", "GitHub Actions"]
@@ -364,7 +364,7 @@ BatchLog[Batch Script Logs < br /> logs/*.log<br/>Timestamped output]
       company: "Snack Brands Australia",
       period: "Jul 2022 – Dec 2023",
       highlights: [
-        "Transformed SCADA sensor streams into dimensional models for real-time KPI tracking.",
+        "Built PySpark ETL processing high-frequency SCADA sensor data (11M+ daily events) from temporal historian format to star-schema dimensional model, enabling real-time KPI tracking and anomaly detection across production lines",
         "Migrated legacy Access planning systems to Power BI (80% increase in agility).",
         "Developed Azure Data Factory pipelines and Snowflake schemas.",
         "Applied A/B testing/linear optimization to reduce spend by 25%."
