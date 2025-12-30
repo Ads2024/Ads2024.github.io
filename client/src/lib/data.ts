@@ -14,7 +14,7 @@ export const RESUME_DATA = {
       title: "PowerBI Report Pipeline Optimization",
       description: "Redesigned enterprise PowerBI paginated report generation pipeline, reducing runtime from 60 to 13-22 minutes (75% improvement) while eliminating Microsoft Fabric capacity consumption limited to interactive consumption. Replaced OneLake-based persistence architecture with in-memory processing via GitHub Actions, freeing compute resources for business-critical analytics. Implemented concurrent batch processing with intelligent retry logic and SharePoint throttle management, delivering 1200+ daily clinical report backups with 95%+ success rate and zero infrastructure cost increase, essential for Business Continuity.",
       tech: ["Microsoft Fabric", "Power BI", "GitHub Actions", "Python", "SharePoint API", "Azure AD"],
-      repo: "https://github.com/Ads2024/fabric-pdf-generatior",
+      repo: "https://github.com/Ads2024/fabric-sharepoint-pipeline",
       mermaid: `---
 config:
   look: classic
