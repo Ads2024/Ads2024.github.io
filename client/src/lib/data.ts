@@ -328,7 +328,7 @@ BatchLog[Batch Script Logs < br /> logs/*.log<br/>Timestamped output]
   ],
   skills: {
     dataModeling: ["Modeling (Dimensional, Semantic, Star/Snowflake, Time-Series)", "Forecasting", "A/B Testing"],
-    languagesTools: ["Python (pandas, numpy, pyarrow, pyspark)", "SQL", "PowerShell", "Git"],
+    languagesTools: ["Python (pandas, numpy, pyarrow, pyspark)", "SQL", "PowerShell", "Git", "R", "Java (Intermediate)", "DAX", "M Formula Language"],
     dataEngineering: ["ETL/ELT", "Pipeline Orchestration (Notebooks,Fabric Pipelines, Dataflow Gen2, Azure Data Factory)", "DataOps (CI/CD, Backup, Monitoring)", "Automated Versioning (Git, GitHub Actions, py Based pipelines)", "Processing (SQL Object Versioning, Schema Tracking, Semi-Structured Processing, API Integration)", "Optimization (Infrastructure Cost Reduction, Performance Optimization)"],
     platforms: ["Databricks", "Microsoft Fabric (Notebooks, Dataflow Gen2, Pipelines, Lakehouse, OneLake)", "Power BI", "Streamlit"],
     cloud: ["Azure (DevOps, Data Factory, SQL, Storage, Service Principals, Azure OpenAI)", "Docker", "Hybrid On-Prem + Cloud", "GitHub Actions"]
