@@ -351,7 +351,7 @@ BatchLog[Batch Script Logs < br /> logs/*.log<br/>Timestamped output]
     {
       role: "Data Analyst",
       company: "Downer EDI",
-      period: "Jan 2024 – Present",
+      period: "Jan 2024 – Aug 2025",
       highlights: [
         "Developed CI/CD-enabled BI dashboards (Power BI, Streamlit, SQL, Python).",
         "Slashed manual reporting by 50% and enabled real-time visibility.",
