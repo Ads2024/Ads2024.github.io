@@ -353,10 +353,13 @@ BatchLog[Batch Script Logs < br /> logs/*.log<br/>Timestamped output]
       company: "Downer EDI",
       period: "Jan 2024 – Aug 2025",
       highlights: [
-        "Developed CI/CD-enabled BI dashboards (Power BI, Streamlit, SQL, Python).",
-        "Slashed manual reporting by 50% and enabled real-time visibility.",
-        "Built end-to-end anomaly detection workflows for ticketing metrics.",
-        "Led Git-based version control implementation for BI assets."
+        "Engineered GitHub Actions with policy-as-code validation across 42 Power BI assets, 48 SQL scripts, and 2 Streamlit applications",
+        "Automated governance checks: data source path restrictions, Power BI relationship cardinality enforcement (via relationship.tmdl parsing), RLS/OLS compliance validation",
+        "Solved ragged hierarchy problem in OneStream financial reporting using clustering algorithm and DAMP export path analysis",
+        "Built dimensional star schemas in Databricks integrating supply chain, ticketing, and operational data sources",
+        "Designed ELT pipeline via Fivetran replicating Jira data into Databricks lakehouse with anomaly detection workflows (IQR/z-score thresholds)",
+        "Developed custom Python extraction framework using win32 and REST APIs processing 1M+ daily records",
+        "Deployed production Streamlit applications on Azure App Service with automated CI/CD"
       ]
     },
     {
