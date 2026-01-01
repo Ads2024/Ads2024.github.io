@@ -335,7 +335,7 @@ BatchLog[Batch Script Logs < br /> logs/*.log<br/>Timestamped output]
   },
   experience: [
     {
-      role: "Analytics Data Engineer (Microsoft Fabric)",
+      role: "Data Engineer",
       company: "HammondCare",
       period: "Aug 2025 – Present",
       highlights: [
