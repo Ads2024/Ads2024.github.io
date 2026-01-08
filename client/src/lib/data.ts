@@ -11,8 +11,8 @@ export const RESUME_DATA = {
   },
   pipelines: [
     {
-      title: "PowerBI Report Pipeline Optimization",
-      description: "Redesigned enterprise PowerBI paginated report generation pipeline, reducing runtime from 60 to 13-22 minutes (75% improvement) while eliminating Microsoft Fabric capacity consumption limited to interactive consumption. Replaced OneLake-based persistence architecture with in-memory processing via GitHub Actions, freeing compute resources for business-critical analytics. Implemented concurrent batch processing with intelligent retry logic and SharePoint throttle management, delivering 1200+ daily clinical report backups with 95%+ success rate and zero infrastructure cost increase, essential for Business Continuity.",
+      title: "Fabric SharePoint Pipeline",
+      description: "Automated report generation system that exports parameterized PowerBI reports to PDF, uploads them to SharePoint with organized folder structures, and distributes shareable links via email. Implements concurrent batch processing with configurable retry logic, API throttle handling, and comprehensive logging. Runs on scheduled GitHub Actions workflows with environment-based configuration for multi-tenant Azure authentication",
       tech: ["Microsoft Fabric", "Power BI", "GitHub Actions", "Python", "SharePoint API", "Azure AD"],
       repo: "https://github.com/Ads2024/fabric-sharepoint-pipeline",
       mermaid: `---
@@ -137,7 +137,7 @@ graph TB
     },
     {
       title: "Database Schema Version Control Automation",
-      description: "Engineered automated database schema versioning system capturing 40,000+ SQL objects daily across hybrid Microsoft Fabric and on-premises infrastructure. Implemented 'invisible infrastructure' pattern with incremental extraction and Git-based change tracking, achieving 100% object coverage. Leveraged GitHub Issues API as notification layer to eliminate SMTP dependencies.",
+      description: "Automated database schema version control system extracting SQL object definitions (views, stored procedures, SQL Agent jobs) from multiple servers and committing changes to Git. Implements incremental extraction using timestamp-based delta tracking to minimize overhead. Supports both Windows Authentication (on-premises) and Service Principal authentication (cloud). Uses GitHub Actions for cloud orchestration and Task Scheduler for on-premises scheduling, with GitHub Issues integration for change notifications.",
       tech: ["Python", "Git", "GitHub API", "Microsoft Fabric", "SQL Server", "GitHub Actions"],
       repo: "https://github.com/Ads2024/sql-schema-version-control",
       mermaid: `---
