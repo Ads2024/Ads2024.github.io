@@ -339,8 +339,8 @@ BatchLog[Batch Script Logs < br /> logs/*.log<br/>Timestamped output]
       company: "HammondCare",
       period: "Aug 2025 – Present",
       highlights: [
-        "Built resilient PySpark ingestion pipelines across Salesforce, Jira, ServiceNow, and Azure DevOps REST APIs, service-principal auth, continuation-token pagination, and retry/backoff, loading 1M+ records daily to Fabric Lakehouse with parallel execution and fault-tolerant retry."
-        "Engineered a Workday RAAS/XML learning-data pipeline with duplicate-page detection, idempotent monthly partition-replace for safe daily re-runs, and schema-alignment-before-write with legacy-schema aliasing for backward compatibility."
+        "Built resilient PySpark ingestion pipelines across Salesforce, Jira, ServiceNow, and Azure DevOps REST APIs, service-principal auth, continuation-token pagination, and retry/backoff, loading 1M+ records daily to Fabric Lakehouse with parallel execution and fault-tolerant retry.",
+        "Engineered a Workday RAAS/XML learning-data pipeline with duplicate-page detection, idempotent monthly partition-replace for safe daily re-runs, and schema-alignment-before-write with legacy-schema aliasing for backward compatibility.",
         "Led enterprise-wide Git integration across Fabric workspaces, standardising version control and auditability with dual-repository (Azure DevOps + GitHub) mirroring for backup resilience.",
         "Designed CI/CD foundations: automated validation, environment promotion, and UAT hygiene.",
         "Built dual-repository backup architecture (Azure DevOps + GitHub) for daily BCP backups.",
