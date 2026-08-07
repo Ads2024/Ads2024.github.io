@@ -339,13 +339,15 @@ BatchLog[Batch Script Logs < br /> logs/*.log<br/>Timestamped output]
       company: "HammondCare",
       period: "Aug 2025 – Present",
       highlights: [
-        "Led enterprise-wide Git integration across Power BI and Fabric workspaces.",
+        "Built resilient PySpark ingestion pipelines across Salesforce, Jira, ServiceNow, and Azure DevOps REST APIs, service-principal auth, continuation-token pagination, and retry/backoff, loading 1M+ records daily to Fabric Lakehouse with parallel execution and fault-tolerant retry."
+        "Engineered a Workday RAAS/XML learning-data pipeline with duplicate-page detection, idempotent monthly partition-replace for safe daily re-runs, and schema-alignment-before-write with legacy-schema aliasing for backward compatibility."
+        "Led enterprise-wide Git integration across Fabric workspaces, standardising version control and auditability with dual-repository (Azure DevOps + GitHub) mirroring for backup resilience.",
         "Designed CI/CD foundations: automated validation, environment promotion, and UAT hygiene.",
-        "Built dual-repository backup architecture (Azure DevOps + GitHub) for daily PBIP backups.",
-        "Engineered automated extraction of 40,000+ SQL objects delivering 10+ years of schema history.",
-        "Delivered OneLake migration pipelines for structured/semi-structured datasets.",
-        "Developed enterprise-wide BI environment monitoring using Power BI REST APIs, providing dataset inventory, lineage mapping, workspace analytics, and usage insights across 200+ reports and 40+ workspaces.",
-        "Built AI-powered ticketing analytics platform ingesting Jira and ServiceNow data into Lakehouse with Azure OpenAI GPT-4.1 conversational interface, enabling natural language querying and predictive workload analysis for stakeholders from managers to C-suite executives"
+        "Built dual-repository backup architecture (Azure DevOps + GitHub) for daily BCP backups.",
+        "Engineered automated schema versioning across 60K+ SQL objects and 1K+ SSIS .dtsx packages, delivering 10+ years of schema history with incident resolution cut from hours to minutes.",
+        "Delivered OneLake migration pipelines for structured and semi-structured datasets.",
+        "Developed enterprise-wide  environment monitoring using Power BI REST APIs, providing dataset inventory, lineage mapping, workspace analytics, and usage insights across 200+ reports and 40+ workspaces.",
+        "Built AI-powered ticketing analytics platform ingesting Jira and ServiceNow data into Lakehouse with an Azure OpenAI conversational interface, enabling natural-language querying and predictive workload analysis for stakeholders from managers to C-suite executives."
       ]
     },
     {
